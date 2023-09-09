@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Text Recognition View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TextRecognitionViewController" id="Y6W-OH-hqX" customClass="TextRecognitionViewController" customModule="ML_Kit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="p7T-8d-8pu">
+                                <rect key="frame" x="0.0" y="75" width="393" height="44"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ABv-8q-Tub"/>
+                                    <barButtonItem title="Item" image="photo.fill.on.rectangle.fill" catalog="system" id="m2J-Ec-i2g">
+                                        <connections>
+                                            <action selector="selectImageButtonClicked:" destination="Y6W-OH-hqX" id="ph2-rD-2pO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="id1-fB-BFd"/>
+                                    <barButtonItem title="Item" image="camera.fill.badge.ellipsis" catalog="system" id="CnG-jW-LQ1">
+                                        <connections>
+                                            <action selector="openCameraButtonClicked:" destination="Y6W-OH-hqX" id="ir4-gD-ja7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="W3T-rE-QIu"/>
+                                </items>
+                                <color key="barTintColor" systemColor="systemGray6Color"/>
+                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ktb-kz-Y6R">
+                                <rect key="frame" x="0.0" y="119" width="393" height="555"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xJk-mF-nrh">
+                                <rect key="frame" x="178" y="378" width="37" height="37"/>
+                                <color key="color" name="AccentColor"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cV-h5-mlP">
+                                <rect key="frame" x="24" y="738" width="345" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2rZ-d4-iDQ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="filled" title="Detect Texts">
+                                    <backgroundConfiguration key="background" cornerRadius="8"/>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="detectButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UDZ-VY-8up"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0cV-h5-mlP" secondAttribute="trailing" constant="24" id="0kL-bW-Z4S"/>
+                            <constraint firstItem="p7T-8d-8pu" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="8wW-Du-BIF"/>
+                            <constraint firstItem="ktb-kz-Y6R" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BoP-1u-7HL"/>
+                            <constraint firstItem="xJk-mF-nrh" firstAttribute="centerY" secondItem="ktb-kz-Y6R" secondAttribute="centerY" id="Rdi-F9-8g4"/>
+                            <constraint firstItem="0cV-h5-mlP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="TJa-Gb-a4M"/>
+                            <constraint firstAttribute="bottom" secondItem="0cV-h5-mlP" secondAttribute="bottom" constant="64" id="aOQ-lL-AN2"/>
+                            <constraint firstItem="xJk-mF-nrh" firstAttribute="centerX" secondItem="ktb-kz-Y6R" secondAttribute="centerX" id="c5I-1B-pO2"/>
+                            <constraint firstItem="0cV-h5-mlP" firstAttribute="top" secondItem="ktb-kz-Y6R" secondAttribute="bottom" constant="64" id="ef7-sV-5lZ"/>
+                            <constraint firstItem="p7T-8d-8pu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="gI5-XF-kOQ"/>
+                            <constraint firstItem="ktb-kz-Y6R" firstAttribute="top" secondItem="p7T-8d-8pu" secondAttribute="bottom" id="hKr-3y-ku2"/>
+                            <constraint firstItem="p7T-8d-8pu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="np7-fC-Oa7"/>
+                            <constraint firstItem="ktb-kz-Y6R" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="yUE-Lh-NR9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detectButton" destination="0cV-h5-mlP" id="fUX-a1-OaQ"/>
+                        <outlet property="imageLoadingActivityIndicator" destination="xJk-mF-nrh" id="Oc7-h7-3E9"/>
+                        <outlet property="mainImageView" destination="ktb-kz-Y6R" id="PuQ-5U-keS"/>
+                        <segue destination="qvG-nS-TTZ" kind="show" identifier="ResultSegue" id="DYQ-wz-90g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="-34"/>
+        </scene>
+        <!--ResultViewController-->
+        <scene sceneID="OEW-nk-uWp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Result" referencedIdentifier="ResultViewController" id="qvG-nS-TTZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dP2-3t-6zA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lsC-Wc-oPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="-35"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill.badge.ellipsis" catalog="system" width="128" height="94"/>
+        <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="98"/>
+        <namedColor name="AccentColor">
+            <color red="0.10196078431372549" green="0.45098039215686275" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

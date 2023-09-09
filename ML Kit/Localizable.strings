@@ -1,0 +1,76 @@
+/* 
+  Localizable.strings
+  ML Kit
+
+  Created by Zokirjon Mamadjonov on 11/07/2023.
+  
+*/
+
+//HomeViewController
+"barcode_title" = "Barcode Scanning";
+"barcode_desc" = "Scan and process barcodes. Supports most standard 1D and 2D formats.";
+
+"text_rec_title" = "Text Recognition";
+"text_rec_desc" = "Recognize and extract text from images.";
+
+"image_lab_title" = "Image Labeling";
+"image_lab_desc" = "Identify objects, locations, activities, animal species, products, and more.";
+
+"language_iden_title" = "Language Identification";
+"language_iden_desc" = "Determine the language of a string of text with only a few words.";
+
+"translation_title" = "Translation";
+"translation_desc" = "Translate text between 58 languages, entirely on device.";
+
+"handwritten_rec_title" = "Handwritten Text Recognition";
+"handwritten_rec_desc" = "Recognizes handwritten text and handdrawn shapes on a digital surface.";
+
+
+//BarcodeScanningViewController
+"detect_barcodes" = "Detect Barcodes";
+"something_went_wrong" = "Something went wrong!";
+"barcode_scan_error_title" = "ERROR";
+"barcode_scan_error_message" = "On-Device barcode detection failed with error: %@";
+"ok" = "OK";
+
+//TextRecognitionViewController
+"detect_texts" = "Detect Texts";
+"text_rec_error_title" = "ERROR";
+"text_rec_error_message" = "On-Device text recognition failed with error: %@";
+
+//ImageLabelingViewController
+"detect_image_labels" = "Detect Image Labels";
+"image_labeling_error_title" = "ERROR";
+"image_labeling_error_message" = "On-Device image labeling failed with error: %@";
+
+//ResultTableViewCell
+"rc_display_value" = "Display Value:";
+"rc_raw_value" = "Raw Value:";
+"rc_frame" = "Frame:";
+"rc_text_value" = "TextValue";
+"rc_rec_language" = "Language";
+"rc_label_text" = "LabelText";
+"rc_confidence" = "Confidence";
+"rc_index" = "Index";
+
+//ResultFooterTableViewCell
+"exit" = "Exit";
+
+//LanguageIdentificationViewController
+"type_here" = "Type here";
+"identify_language" = "Identify Language";
+"possible_languages" = "Possible Languages";
+"language_iden_error_title" = "ERROR";
+"language_iden_error_message" = "On-Device language identification failed with error: %@";
+"identified_language" = "Identified Language:";
+"possible_languages_n" = "Possible Languages:\n";
+"undetermined_language" = "Undetermined Language";
+
+//TranslationViewController
+"ar" = "Arabic";
+"en" = "English";
+"de" = "German";
+"pl" = "Polish";
+"ru" = "Russian";
+"translation_error_title" = "ERROR";
+"translation_error_message" = "On-Device language identification failed with error: %@";

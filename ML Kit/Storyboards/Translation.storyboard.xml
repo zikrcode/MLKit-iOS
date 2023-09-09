@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Translation View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TranslationViewController" id="Y6W-OH-hqX" customClass="TranslationViewController" customModule="ML_Kit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FKN-Df-Mh0">
+                                <rect key="frame" x="4" y="59" width="385" height="160"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="9Sb-IY-etA"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xex-bT-dPm" userLabel="Pickers and switcher">
+                                <rect key="frame" x="4" y="219" width="385" height="120"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nxd-Cf-aEn">
+                                        <rect key="frame" x="0.0" y="0.0" width="159.66666666666666" height="120"/>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dje-m3-zht">
+                                        <rect key="frame" x="167.66666666666666" y="0.0" width="50" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="pzU-c7-B1c"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="arrow.left.and.right" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="swapLanguageButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="udY-Dg-geh"/>
+                                        </connections>
+                                    </button>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3S-4G-Udw">
+                                        <rect key="frame" x="225.66666666666663" y="0.0" width="159.33333333333337" height="120"/>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="d9D-B3-5dJ"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbv-Cw-Naw">
+                                <rect key="frame" x="0.0" y="339" width="393" height="479"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQT-kz-Y5J">
+                                        <rect key="frame" x="4" y="4" width="385" height="471"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="kQT-kz-Y5J" secondAttribute="bottom" constant="4" id="JEz-vW-zJL"/>
+                                    <constraint firstAttribute="trailing" secondItem="kQT-kz-Y5J" secondAttribute="trailing" constant="4" id="YvV-94-7f8"/>
+                                    <constraint firstItem="kQT-kz-Y5J" firstAttribute="leading" secondItem="Qbv-Cw-Naw" secondAttribute="leading" constant="4" id="cXb-Y3-ZNG"/>
+                                    <constraint firstItem="kQT-kz-Y5J" firstAttribute="top" secondItem="Qbv-Cw-Naw" secondAttribute="top" constant="4" id="ySu-hQ-AuS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qbv-Cw-Naw" firstAttribute="top" secondItem="xex-bT-dPm" secondAttribute="bottom" id="9q4-wO-59Y"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FKN-Df-Mh0" secondAttribute="trailing" constant="4" id="GQa-Gm-RMH"/>
+                            <constraint firstItem="FKN-Df-Mh0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="K2C-tB-jKW"/>
+                            <constraint firstItem="xex-bT-dPm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="4" id="Nca-il-o52"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Qbv-Cw-Naw" secondAttribute="trailing" id="RI5-pL-iWK"/>
+                            <constraint firstAttribute="trailing" secondItem="xex-bT-dPm" secondAttribute="trailing" constant="4" id="c8d-dN-QPJ"/>
+                            <constraint firstItem="Qbv-Cw-Naw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="f5a-gj-28n"/>
+                            <constraint firstItem="FKN-Df-Mh0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="4" id="weS-Uc-023"/>
+                            <constraint firstItem="xex-bT-dPm" firstAttribute="top" secondItem="FKN-Df-Mh0" secondAttribute="bottom" id="xR1-vO-8AZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Qbv-Cw-Naw" secondAttribute="bottom" id="yp9-wS-rGs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputPicker" destination="Nxd-Cf-aEn" id="aO7-2S-3vv"/>
+                        <outlet property="inputTextView" destination="FKN-Df-Mh0" id="xQA-TQ-KHy"/>
+                        <outlet property="outputPicker" destination="b3S-4G-Udw" id="N9R-fb-je0"/>
+                        <outlet property="outputTextView" destination="kQT-kz-Y5J" id="qlW-hT-7X9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.left.and.right" catalog="system" width="128" height="76"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

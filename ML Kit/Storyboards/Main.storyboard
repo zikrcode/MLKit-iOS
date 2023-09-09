@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ctH-AF-A5v">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="XO9-uw-gwL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ctH-AF-A5v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7H6-Oe-4Yn">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="22C-j1-ZG8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="33h-rw-uDg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.885496183206101" y="-34.507042253521128"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="ML_Kit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hUt-c7-EbW">
+                                <rect key="frame" x="16" y="103" width="361" height="715"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="6vR-R7-d4D">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hUt-c7-EbW" secondAttribute="trailing" constant="16" id="IKd-Tl-yUz"/>
+                            <constraint firstItem="hUt-c7-EbW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZFL-9f-mT2"/>
+                            <constraint firstItem="hUt-c7-EbW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="azw-MX-BPM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hUt-c7-EbW" secondAttribute="bottom" id="eXs-d8-geh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JV1-fS-zhL"/>
+                    <connections>
+                        <outlet property="homeCollectionView" destination="hUt-c7-EbW" id="raW-cd-b29"/>
+                        <segue destination="AUf-FR-njo" kind="show" identifier="BarcodeScanningSegue" id="Oit-yf-oK6"/>
+                        <segue destination="1Ku-Md-W9h" kind="show" identifier="TextRecognitionSegue" id="YET-6m-0Cj"/>
+                        <segue destination="svJ-Pb-MRW" kind="show" identifier="ImageLabelingSegue" id="30H-kn-SJf"/>
+                        <segue destination="5XC-7C-HgH" kind="show" identifier="LanguageIdentificationSegue" id="xZC-KK-Q1v"/>
+                        <segue destination="Nt5-fI-gBV" kind="show" identifier="TranslationSegue" id="S69-bg-1Rw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="-35"/>
+        </scene>
+        <!--BarcodeScanningViewController-->
+        <scene sceneID="BEp-QM-nH4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BarcodeScanning" referencedIdentifier="BarcodeScanningViewController" id="AUf-FR-njo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="szr-SQ-oMt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUY-iW-Xph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1658" y="-326"/>
+        </scene>
+        <!--TextRecognitionViewController-->
+        <scene sceneID="HFa-vh-KQN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TextRecognition" referencedIdentifier="TextRecognitionViewController" id="1Ku-Md-W9h" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BWx-L8-ksF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2x-g7-cJf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652" y="-225"/>
+        </scene>
+        <!--ImageLabelingViewController-->
+        <scene sceneID="KDZ-ZF-7vv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ImageLabeling" referencedIdentifier="ImageLabelingViewController" id="svJ-Pb-MRW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Sb0-t0-z96"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vxe-1T-s8w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1645" y="-118"/>
+        </scene>
+        <!--LanguageIdentificationViewController-->
+        <scene sceneID="GY0-Li-PLe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LanguageIdentification" referencedIdentifier="LanguageIdentificationViewController" id="5XC-7C-HgH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mkF-GJ-RSI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C8k-iV-ma2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684" y="56"/>
+        </scene>
+        <!--TranslationViewController-->
+        <scene sceneID="K9y-a3-cdG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Translation" referencedIdentifier="TranslationViewController" id="Nt5-fI-gBV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KHH-qh-5dU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kN8-Lp-N9V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629" y="153"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.10196078431372549" green="0.45098039215686275" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

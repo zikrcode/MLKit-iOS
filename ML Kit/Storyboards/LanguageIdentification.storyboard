@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Language Identification View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="LanguageIdentificationViewController" id="Y6W-OH-hqX" customClass="LanguageIdentificationViewController" customModule="ML_Kit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aNM-2s-HxR">
+                                <rect key="frame" x="24" y="59" width="345" height="160"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="tPn-kw-xIr"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8TD-oB-w6W">
+                                <rect key="frame" x="0.0" y="235" width="393" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="VwR-m6-la8"/>
+                                    <barButtonItem title="Identify Language" id="3jU-0F-b6n">
+                                        <connections>
+                                            <action selector="identifyLanguageButtonClicked:" destination="Y6W-OH-hqX" id="lL2-T5-bBi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="riP-vo-xJk"/>
+                                    <barButtonItem title="Possible Languages" id="C4v-VD-ioF">
+                                        <connections>
+                                            <action selector="possibleLanguageButtonClicked:" destination="Y6W-OH-hqX" id="AOg-DP-W3C"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1jd-XN-Mpn"/>
+                                </items>
+                                <color key="barTintColor" systemColor="systemGray5Color"/>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7V-4z-drv">
+                                <rect key="frame" x="0.0" y="279" width="393" height="573"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vy3-SF-AF1">
+                                        <rect key="frame" x="24" y="0.0" width="345" height="541"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstItem="Vy3-SF-AF1" firstAttribute="top" secondItem="F7V-4z-drv" secondAttribute="top" id="VJQ-yv-ust"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vy3-SF-AF1" secondAttribute="bottom" constant="32" id="XLC-WO-dgz"/>
+                                    <constraint firstItem="Vy3-SF-AF1" firstAttribute="leading" secondItem="F7V-4z-drv" secondAttribute="leading" constant="24" id="bxY-RF-5JB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vy3-SF-AF1" secondAttribute="trailing" constant="24" id="xd9-eA-EpY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="F7V-4z-drv" secondAttribute="bottom" id="7pO-HW-lFt"/>
+                            <constraint firstItem="F7V-4z-drv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="JeS-Ty-cWv"/>
+                            <constraint firstAttribute="trailing" secondItem="8TD-oB-w6W" secondAttribute="trailing" id="MLf-jx-RWH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aNM-2s-HxR" secondAttribute="trailing" constant="24" id="Qqw-4h-Hdz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="F7V-4z-drv" secondAttribute="trailing" id="T7D-Ro-ypa"/>
+                            <constraint firstItem="aNM-2s-HxR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="hAO-xu-bIT"/>
+                            <constraint firstItem="8TD-oB-w6W" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="iqB-pk-uLV"/>
+                            <constraint firstItem="F7V-4z-drv" firstAttribute="top" secondItem="8TD-oB-w6W" secondAttribute="bottom" id="llj-Lz-Bsf"/>
+                            <constraint firstItem="aNM-2s-HxR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="mrC-78-QyR"/>
+                            <constraint firstItem="8TD-oB-w6W" firstAttribute="top" secondItem="aNM-2s-HxR" secondAttribute="bottom" constant="16" id="yvx-nd-Qt2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="identifyLanguageButtonItem" destination="3jU-0F-b6n" id="H8r-a3-C4O"/>
+                        <outlet property="mainTextView" destination="aNM-2s-HxR" id="CrJ-9c-S65"/>
+                        <outlet property="possibleLanguageButtonItem" destination="C4v-VD-ioF" id="mNV-nM-ldN"/>
+                        <outlet property="resultTextView" destination="Vy3-SF-AF1" id="bos-8I-0yJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
